@@ -1,0 +1,112 @@
+.pricing-page {
+  padding: 2rem 1rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.pricing-card {
+  padding: 3rem 2rem;
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform var(--transition-normal);
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+}
+
+.pricing-card.popular {
+  border: 1px solid var(--color-brand-primary);
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.1) 0%, rgba(18, 18, 22, 0.8) 100%);
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(59, 130, 246, 0.2);
+}
+
+.pricing-card.popular:hover {
+  transform: scale(1.05) translateY(-8px);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, var(--color-brand-primary), var(--color-brand-secondary));
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--border-radius-full);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.plan-name {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+}
+
+.plan-price-container {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.plan-price {
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+  line-height: 1;
+}
+
+.plan-period {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+}
+
+.plan-features {
+  list-style: none;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex-grow: 1;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.plan-check {
+  color: var(--color-brand-secondary);
+}
+
+.plan-btn {
+  text-align: center;
+  display: block;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .pricing-card.popular {
+    transform: scale(1);
+  }
+  .pricing-card.popular:hover {
+    transform: translateY(-8px);
+  }
+}
